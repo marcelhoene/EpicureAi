@@ -46,7 +46,7 @@ def train_model(epochs: int = 10, img_size: int = 512):
         # Initialize a new YOLO model with default weights
         model = YOLO("yolov8n.pt")
         model.train(
-            data=os.path.join(LOCAL_DATA_PATH, "data.yaml"),
+            data=os.path.join(LOCAL_DATA_PATH,'augmented_data',"data.yaml"),
             epochs=epochs,
             imgsz=img_size,
             patience=20,
@@ -89,4 +89,4 @@ def train_model(epochs: int = 10, img_size: int = 512):
 
 # Main execution
 if __name__ == "__main__":
-    train_model(epochs=NUM_EPOCHS)
+    train_model(epochs=10)
