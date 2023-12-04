@@ -4,6 +4,7 @@ from epicureai.ml_logic.augmentation import augmentation_training_set, augmentat
 from epicureai.ml_logic.data_yaml import create_data_yaml
 from epicureai.params import *
 
+
 def main():
     load_data_from_roboflow()
     augmentation_training_set()
